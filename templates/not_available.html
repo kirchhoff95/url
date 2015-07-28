@@ -1,0 +1,17 @@
+<link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+    <h2>Sorry, but this URL is not available! </h2>
+    <form action="{{ url_for('home') }}">
+        <button class = "btn btn-default" type="submit">Go home!</button>
+    </form>
+</div>
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>

@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <form method="post" action = "{{ url_for('add_url') }}">
+    <form autocomplete="off" method="post" action = "{{ url_for('add_url') }}">
         <div class = "form-group">
             <label for="long_url"> Long URL </label>
             <div class="input-group">
-                <input type="text" class = "form-control" name="long_url">
+                <input type="text" class = "form-control" name="long_url" id = "long_url">
                 <span class="input-group-btn">
                     <button class = "btn btn-success" type="submit">Submit</button>
                 </span>
             </div><!-- /input-group -->
-
+            <br>
             <label for = "short_url">Short URL</label>
             <div class="input-group">
-                <input type="text" class = "form-control" name="short_url">
+                <input type="text" class = "form-control short_url" name="short_url" id = "short_url">
                 <span class="input-group-btn">
                     <button id = "copy_button" class = "btn btn-danger" type="button">Copy link</button>
                 </span>

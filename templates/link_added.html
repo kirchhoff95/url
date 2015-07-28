@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form autocomplete="off">
+        <div class = "form-group">
+            <div class="input-group">
+                <input type="text" class = "form-control short_url" value = "{{short_link}}">
+                <span class="input-group-btn">
+                    <button id = "copy_button" class = "btn btn-danger" type="button" readonly>Copy link</button>
+                </span>
+            </div><!-- /input-group -->
+        </div>
+    </form>
+    <form action="{{ url_for('home') }}">
+        <button class = "btn btn-default" type="submit">Go home!</button>
+    </form>
+{% endblock %}
