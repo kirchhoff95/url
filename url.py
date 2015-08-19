@@ -31,7 +31,3 @@ def go_to_url(link):
         return redirect(get_link(link))
     else:
         return render_template('not_available.html')
-
-
-if __name__ == "__main__":
-    app.run(debug=True)

@@ -1,9 +1,9 @@
 # coding: utf-8
 
-DATA_FILE = 'data.txt'
+DATA_FILE = '/home/corex/url/data.txt'
 DATA_ENCODING = 'utf-8'
 
-current_host = "http://127.0.0.1:5000/"
+current_host = "http://corex.pythonanywhere.com/"
 restricted_URLS = ["add_new_very_long_url", "non_available", "auto_generated_link"]
 
 
@@ -33,9 +33,10 @@ def isValid(link):
 
 def valid_long_url(url):
     pr = "http://"
+    pr_s = "https://"
     if (len(url) <= len(pr)):
         return False
-    elif url[:len(pr)] == pr:
+    elif url[:len(pr)] == pr or url[:len(pr_s)] == pr_s:
         return True
     else:
         return False
